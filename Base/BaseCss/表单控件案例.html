@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单控件案例</title>
+    <style type="text/css">
+        table{
+            width: 300px;
+            height: 500px;
+            border: solid 1px red;
+            /*边框的合并*/
+            border-collapse: collapse;
+        }
+        td{
+            border: solid 1px red;
+        }
+
+        /*控件表单案例*/
+        .username{
+            /*去除边框*/
+            border: 0 none;
+            /*去除轮廓线*/
+            outline-style: none;
+            background: #ccc;
+            border: dashed green 1px;
+        }
+
+        .username:hover{
+            border: dashed red 1px;
+        }
+
+        .email{
+            /*去除边框*/
+            border: 0 none;
+            /*去除轮廓线*/
+            outline-style: none;
+
+            border-bottom: dotted red 1px;
+        }
+
+        .search{
+            /*去除边框*/
+            border: 0 none;
+            /*去除轮廓线*/
+            outline-style: none;
+            background: url("../../img/1.jpg") right center no-repeat;
+            border: solid 1px red;
+        }
+    </style>
+</head>
+<body>
+    <table cellspacing="0">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+
+    <h1>表单控件案例</h1>
+    <label for="username">用户名：</label>
+    <input type="text" id="username" class="username"><br/>
+    邮箱：<input type="text" class="email"><br/>
+    搜索一下：<input type="text" class="search">
+</body>
+</html>
