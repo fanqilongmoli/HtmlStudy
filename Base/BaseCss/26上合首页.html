@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上合首页</title>
+    <style type="text/css">
+        body, div, ul, li, p, h1, h2, h3, h4, h5, h6, dl, dt, dd, input {
+            margin: 0;
+            padding: 0;
+            font: 12px "宋体";
+        }
+
+        img {
+            border: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        input {
+            border: 0 none;
+            outline-style: none;
+        }
+
+        .fl {
+            float: left;
+        }
+
+        .fr {
+            float: right;
+        }
+
+        .clearfix:after {
+            content: '';
+            display: block;
+            height: 0;
+            line-height: 0;
+            visibility: hidden;
+            clear: both;
+        }
+
+        .clearfix {
+            zoom: 1;
+        }
+
+        .header {
+            width: 980px;
+            height: 39px;
+            margin: 20px auto 0;
+        }
+
+        .search {
+            width: 195px;
+            height: 30px;
+            border: solid 1px #ececec;
+        }
+
+        .search input[type=text] {
+            width: 165px;
+            height: 30px;
+            vertical-align: top;
+        }
+
+        .logo {
+            width: 179px;
+            height: 39px;
+        }
+
+        .search input[type=button] {
+            width: 30px;
+            height: 30px;
+            vertical-align: top;
+            background: url("../../img/2/images/search2.jpg");
+        }
+
+        .nav {
+            height: 55px;
+            background: url("../../img/2/images/nav_bg.png");
+            border-top: solid 1px #bbb;
+        }
+
+        .nav-con {
+            width: 980px;
+            height: 55px;
+            margin: 0 auto;
+        }
+
+        .nav-con li {
+            float: left;
+        }
+
+        .nav-con a {
+            display: inline-block;
+            height: 55px;
+            padding: 0 20px;
+            line-height: 55px;
+            font-size: 12px;
+            font-weight: 700;
+            font-family: "宋体";
+            color: #000;
+            background: url("../../img/2/images/nav_bg-line.png") no-repeat right center;
+        }
+
+        .nav-con a:hover {
+            color: #7CB609;
+        }
+
+        .banner {
+            width: 980px;
+            height: 597px;
+            margin: 0 auto;
+        }
+
+        .message {
+            height: 32px;
+            background: #FBFBFB;
+            border-top: solid 1px #EFEFEF;
+            border-bottom: solid 1px #EFEFEF;
+            margin-bottom: 10px;
+        }
+
+        .message-con {
+            width: 980px;
+            height: 32px;
+            margin: 0 auto;
+        }
+
+        .message-con-l {
+            height: 32px;
+            line-height: 32px;
+        }
+
+        .message-con-r {
+            height: 16px;
+            margin-top: 8px;
+        }
+
+        .news {
+            width: 980px;
+            margin: 10px auto;
+
+        }
+
+        .new-left, .new-cen, .new-right {
+
+            border: solid 1px #E4E4E4;
+        }
+
+        .new-left {
+            width: 310px;
+            height: 224px;
+
+            position: relative;
+        }
+
+        .new-cen {
+            width: 373px;
+            height: 224px;
+            margin-left: 10px;
+        }
+
+        .new-right {
+            width: 268px;
+            height: 224px;
+        }
+
+        .product {
+            margin-top: 14px;
+            margin-left: 6px;
+            color: #7AB800;
+
+        }
+
+        .product img {
+            vertical-align: middle;
+        }
+
+        .product-pic {
+            position: absolute;
+            left: 55px;
+            top: 45px;
+        }
+
+        .sj-l {
+            position: absolute;
+            left: 23px;
+            top: 90px;
+        }
+
+        .sj-r {
+            position: absolute;
+            right: 23px;
+            top: 90px;
+        }
+
+        .new-cen ul {
+            margin: 10px 17px 0;
+        }
+
+        .new-cen ul li {
+            height: 27px;
+            line-height: 27px;
+            border-bottom: dashed 1px #DCDCDC;
+        }
+
+        .new-cen ul li a {
+            color: #000000;
+        }
+
+        .new-cen ul li a.one {
+            color: red;
+            font-weight: 700;
+        }
+
+        .tec {
+            margin: 10px 0 30px 28px;
+        }
+
+        .tec ul li {
+            height: 12px;
+            border-left: solid 3px #7AB800;
+            margin-top: 10px;
+            line-height: 12px;
+            padding-left: 5px;
+        }
+
+        .tec ul li a {
+            color: black;
+        }
+
+        .new-right p {
+            margin-left: 28px;
+            line-height: 1.5;
+        }
+
+        .footer {
+            height: 280px;
+            background: #2D2D2D;
+            border-bottom: 1px dashed #E4E4E4;
+        }
+
+        .footer-con {
+            width: 980px;
+            margin: 0 auto;
+        }
+
+        .footer-con dl {
+            float: left;
+            margin-top: 20px;
+            margin-right: 40px;
+        }
+        .footer-con dt{
+            color: #c0c0c0;
+        }
+        .footer-con dd{
+            color: #707070;
+            margin-top: 20px;
+        }
+        .bot{
+            background: #2D2D2D;
+            height: 54px;
+            text-align: center;
+            padding-top: 30px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="logo fl"><img src="../../img/2/images/logo.jpg" alt=""></div>
+    <div class="search fr"><input type="text" value="请输入..."><input type="button"></div>
+</div>
+
+<div class="nav">
+    <div class="nav-con">
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">樊启龙</a></li>
+            <li><a href="#">你谁</a></li>
+            <li><a href="#">哈哈哈</a></li>
+            <li><a href="#">呵呵呵</a></li>
+            <li><a href="#">来来来</a></li>
+        </ul>
+    </div>
+</div>
+<div class="banner">
+    <img src="../../img/2/images/banner.jpg" alt="">
+</div>
+<div class="message">
+    <div class="message-con">
+        <div class="message-con-l fl">wdasdadasdasdasdbijbsfiuwqbiuqweiquw</div>
+        <div class="message-con-r fr">
+            <img src="../../img/2/images/zone.png" alt="">
+            <img src="../../img/2/images/weibo.png" alt="">
+            <img src="../../img/2/images/xinlang.png" alt="">
+            <img src="../../img/2/images/weibo.png" alt="">
+        </div>
+    </div>
+</div>
+
+<div class="news clearfix">
+    <div class="new-left fl">
+        <div class="product">
+            <img src="../../img/2/images/o.jpg" alt="">
+            新品发布
+        </div>
+        <div class="product-pic">
+            <img src="../../img/2/images/home_hot_01.png" alt="">
+        </div>
+        <div class="sj-l"><img src="../../img/2/images/left.png" alt=""></div>
+        <div class="sj-r"><img src="../../img/2/images/right.png" alt=""></div>
+    </div>
+    <div class="new-cen fl">
+        <div class="product">
+            <img src="../../img/2/images/o.jpg" alt="">
+            新闻中心
+        </div>
+        <ul>
+            <li><a class="one" href="#">致歉公告</a></li>
+            <li><a href="#">委屈二群翁群翁群翁</a></li>
+            <li><a href="#">绕弯儿翁绕弯儿翁r</a></li>
+            <li><a href="#">梵蒂冈地方规定</a></li>
+            <li><a href="#">而我二翁rwvxc</a></li>
+            <li><a href="#">而我二翁rwvxc</a></li>
+        </ul>
+    </div>
+    <div class="new-right fr">
+        <div class="product">
+            <img src="../../img/2/images/o.jpg" alt="">
+            技术支持
+        </div>
+        <div class="tec">
+            <ul>
+                <li><a href="#">售后服务</a></li>
+                <li><a href="#">头属于建议</a></li>
+                <li><a href="#">联保网点</a></li>
+                <li><a href="#">常见问题反馈</a></li>
+            </ul>
+        </div>
+        <p>
+            深证市汇聚中和科技有限公司
+            服务热线：400-633-7299
+        </p>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="footer-con">
+        <dl>
+            <dt>哈哈首页</dt>
+            <dd>返回首页</dd>
+        </dl>
+        <dl>
+            <dt>哈哈首页</dt>
+            <dd>返回首页</dd>
+        </dl>
+        <dl>
+            <dt>哈哈首页</dt>
+            <dd>返回首页</dd>
+        </dl>
+        <dl>
+            <dt>哈哈首页</dt>
+            <dd>返回首页</dd>
+        </dl>
+    </div>
+</div>
+
+<div class="bot">
+    深圳市会居中和优先公司深圳市会居中和优先公司深圳市会居中和优先公司深圳市<br>
+    会居中和优先公司深圳市会居中和优先公司深圳市会居中和优先公司
+</div>
+</body>
+</html>
