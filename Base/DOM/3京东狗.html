@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="gou" src="img/jd1.png">
+
+<script>
+    var gou = document.getElementById('gou');
+    gou.onmouseover = function () {
+        console.log("onmouseover");
+        this.src = 'img/jd2.png'
+    };
+    gou.onmouseout = function () {
+        this.src = 'img/jd1.png';
+        console.log("onmouseout");
+    };
+</script>
+</body>
+</html>

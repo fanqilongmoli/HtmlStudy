@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片切换</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .bar li {
+            float: left;
+            list-style: none;
+            margin: 10px 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+<h2>hahahah</h2>
+<div class="bar">
+    <ul>
+        <li><img src="img/1-small.jpg" alt=""></li>
+        <li><img src="img/2-small.jpg" alt=""></li>
+        <li><img src="img/3-small.jpg" alt=""></li>
+        <li><img src="img/4-small.jpg" alt=""></li>
+        <li><img src="img/5-small.jpg" alt=""></li>
+    </ul>
+</div>
+<div style="clear: both"></div>
+<div class="content">
+    <img id="content2" src="img/placeholder.png">
+</div>
+</body>
+
+<script>
+    var content2 = document.getElementById("content2");
+    var list = document.getElementsByTagName("li");
+    for (var i = 0; i < list.length; i++) {
+        list[i].onclick = function () {
+            console.log(this.children[0]);
+            var src = this.children[0].src;
+            content2.src = src.replace('-small','');
+        }
+    }
+</script>
+</html>

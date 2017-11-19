@@ -148,6 +148,57 @@ s, i, em {
 
 }
 
+.hide {
+    display: none;
+}
+
+.dorpdown-layer {
+    display: none;
+    position: absolute;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    -moz-box-shadow: 1px 2px 1px rgba(0,0,0,.1);
+    box-shadow: 1px 2px 1px rgba(0,0,0,.1);
+}
+
+.dorpdown {
+    position: relative;
+    z-index: 21;
+}
+
+.mobile {
+    position: relative;
+    z-index: 21;
+}
+
+.mobile_static {
+    position: absolute;
+    left: 3px;
+    width: 66px;
+    height: 66px;
+    border: 1px solid #cfcfcf;
+    background: #F6F6F6;
+}
+
+.mobile_pop {
+    display: none;
+    position: absolute;
+    left: auto;
+    right: 0;
+    top: 30px;
+    width: 140px;
+    border: 1px solid #cfcfcf;
+    background-color: #fff;
+    border-bottom: 3px solid #60575a;
+}
+
+.mobile_static_qrcode {
+    margin: 4px auto;
+    width: 60px;
+    height: 60px;
+    background: #F6F6F6 url("../image/shoujijd.png") 50% no-repeat;
+}
+
 .site-nav-send s, .fore s {
     position: absolute;
     top: -7px;
@@ -240,7 +291,8 @@ s, i, em {
     line-height: 32px;
     border-right: 0;
 }
-.search-input button{
+
+.search-input button {
     float: left;
     width: 82px;
     height: 36px;
@@ -263,7 +315,8 @@ s, i, em {
     border: 1px solid #DFDFDF;
     background-color: #f9f9f9;
 }
-.icon1{
+
+.icon1 {
     position: absolute;
     top: 8px;
     left: 18px;
@@ -271,14 +324,16 @@ s, i, em {
     height: 16px;
     background: url("../image/tel.png") no-repeat 0 -58px;
 }
-.icon2{
+
+.icon2 {
     position: absolute;
     right: 10px;
     color: #999;
-    font:  13px/33px "SimSun";
+    font: 13px/33px "SimSun";
 
 }
-.icon3{
+
+.icon3 {
     position: absolute;
     top: -5px;
     width: 16px;
@@ -289,13 +344,15 @@ s, i, em {
     color: #fff;
     border-radius: 7px 7px 7px 0;
 }
+
 .search-moreAlink {
     float: left;
     width: 538px;
     height: 28px;
     line-height: 28px;
 }
-.search-moreAlink a{
+
+.search-moreAlink a {
     float: left;
     margin-right: 8px;
 }
@@ -303,42 +360,51 @@ s, i, em {
 /*search 部分结束*/
 
 /*footer开始*/
-.footer-top-slogen{
+.footer-top-slogen {
     width: 100%;
     height: 94px;
     position: relative;
     background: #f5f5f5;
     margin-bottom: 16px;
 }
-.footer-top-slogen-icon{
+
+.footer-top-slogen-icon {
     position: absolute;
     top: 20px;
     left: 50%;
 }
-.footer-top-slogen-icon1{
+
+.footer-top-slogen-icon1 {
     margin-left: -604px;
 }
-.footer-top-slogen-icon3{
+
+.footer-top-slogen-icon3 {
     margin-left: -302px;
 }
-.footer-top-slogen-icon4{
+
+.footer-top-slogen-icon4 {
     margin-left: 302px;
 }
-.footer-top-shopping dl{
+
+.footer-top-shopping dl {
     float: left;
     width: 200px;
 }
-.footer-top-shopping dt, .coverage h3{
+
+.footer-top-shopping dt, .coverage h3 {
     height: 34px;
     font: 400 16px/34px "Microsoft YaHei";
 }
-.footer-top-shopping dd{
+
+.footer-top-shopping dd {
     line-height: 20px;
 }
-.footer-top-shopping .last-dl{
+
+.footer-top-shopping .last-dl {
     width: 100px;
 }
-.coverage{
+
+.coverage {
     width: 186px;
     height: 169px;
     float: right;
@@ -346,10 +412,125 @@ s, i, em {
     padding-left: 17px;
     background: url("../image/china.png") no-repeat left bottom;
 }
-.coverage p{
+
+.coverage p {
     margin-top: 8px;
 }
-.coverage a{
+
+.coverage a {
     float: right;
 }
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px 0 30px;
+    border-top: solid 1px #e5e5e5;
+}
+
+.footer-bottom-link a {
+    margin: 0 10px;
+}
+
+.footer-bottom-copyright {
+    margin: 10px 0;
+}
+
+.footer-bottom-img img {
+    margin: 0 5px;
+}
+
 /*footer结束*/
+
+/*shortcut-nav开始*/
+.shortcut-nav {
+    height: 44px;
+    width: 100%;
+    border-bottom: solid 2px #b1191a;
+}
+
+.shortcut-nav-menu {
+    width: 210px;
+    height: 44px;
+    background: pink;
+    float: left;
+    position: relative;
+    z-index: 1;
+}
+
+.shortcut-nav-items {
+    width: 730px;
+    height: 44px;
+    float: left;
+    /*background: blue;*/
+}
+
+.shortcut-nav-items li {
+    float: left;
+}
+
+.shortcut-nav-items a {
+    display: inline-block;
+    height: 44px;
+    padding: 0 20px;
+    color: #333;
+    font: 400 16px/44px "Microsoft YaHei";
+
+}
+
+.shortcut-nav-img {
+    width: 200px;
+    height: 44px;
+    margin-right: 50px;
+    margin-top: -10px;
+    background: yellow;
+    float: right;
+}
+
+.shortcut-nav-menu-all a {
+    display: inline-block;
+    width: 190px;
+    height: 44px;
+    color: #fff;
+    background: #b1191a;
+    font: 400 15px/44px "Microsoft YaHei";
+    padding: 0 10px;
+}
+
+.shortcut-nav-menu-one {
+    height: 466px;
+    margin-top: 1px;
+    background: #C81623;
+    border-left: 1px solid #b1191a;
+    border-bottom: 1px solid #b1191a;
+}
+
+.shortcut-nav-menu-one div {
+    height: 31px;
+    padding: 0 10px;
+    color: #ffffff;
+    font: 400 14px/31px "Microsoft YaHei";
+}
+
+.shortcut-nav-menu-one div:hover {
+    background: white;
+}
+
+.shortcut-nav-menu-one div:hover a {
+    color: #C81623;
+}
+
+.shortcut-nav-menu-one h3 {
+    float: left;
+}
+
+.shortcut-nav-menu-one i {
+    float: right;
+    font: 400 9px/31px "consolas";
+}
+
+.shortcut-nav-menu-one a {
+    color: #ffffff;
+}
+
+/*shortcut-nav结束*/

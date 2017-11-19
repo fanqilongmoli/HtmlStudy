@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .top-banner {
+            background: pink;
+        }
+
+        .w {
+            width: 1210px;
+            margin: 10px auto;
+            position: relative;
+        }
+
+        img {
+            width: 1210px;
+            height: 80px;
+            background: yellow;
+        }
+
+        a {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            color: #fff;
+            background: black;
+            text-decoration: none;
+            width: 20px;
+            height: 20px;
+            font: 700 14px/20px "simsum";
+            text-align: center;
+        }
+
+        .hide {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+<div class="top-banner">
+    <div class="w">
+        <img src="" alt="">
+        <a id="close" href="#">×</a>
+    </div>
+</div>
+
+<script>
+    var a = document.getElementById('close');
+    var banner = document.getElementsByClassName('top-banner')[0];
+    a.onclick = function () {
+        console.log('dasd');
+        banner.className += ' hide';
+        return false;
+    }
+</script>
+</body>
+</html>

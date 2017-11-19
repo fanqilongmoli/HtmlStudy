@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .warp {
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 1px solid #c0c0c0;
+            width: 300px;
+        }
+
+        th, td {
+            border: 1px solid #d0d0d0;
+            color: #404060;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #09c;
+            font: bold 16px "微软雅黑";
+            color: #fff;
+        }
+
+        td {
+            font: 14px "微软雅黑";
+            text-align: center;
+        }
+
+        tbody tr {
+            background-color: #f0f0f0;
+        }
+
+        tbody tr:hover {
+            cursor: pointer;
+            background-color: #fafafa;
+        }
+    </style>
+</head>
+<body>
+<div class="warp">
+    <table>
+        <thead>
+        <tr>
+            <th>
+                <input type="checkbox" id="theadInp"/>
+            </th>
+            <th>菜名</th>
+            <th>饭店</th>
+        </tr>
+        </thead>
+        <tbody id="tbody">
+        <tr>
+            <td><input type="checkbox"/></td>
+            <td>地三鲜1</td>
+            <td>田老师</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"/></td>
+            <td>地三鲜2</td>
+            <td>田老师</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"/></td>
+            <td>地三鲜3</td>
+            <td>田老师</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"/></td>
+            <td>地三鲜4</td>
+            <td>田老师</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"/></td>
+            <td>地三鲜5</td>
+            <td>田老师</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script>
+
+    var topInp = document.getElementById("theadInp");
+    var tbody = document.getElementById("tbody");
+    var botInpArr = tbody.getElementsByTagName("input");
+
+
+    topInp.onclick = function () {
+        for (var i = 0; i < botInpArr.length; i++) {
+            botInpArr[i].checked = this.checked;
+        }
+    };
+
+    for(var i=0;i<botInpArr.length;i++){
+        botInpArr[i].onclick = function () {
+            //开闭原则
+            var bool = true;
+            //检测每一个input的checked属性值。
+            for(var j=0;j<botInpArr.length;j++){
+                if(botInpArr[j].checked === false){
+                    bool = false;
+                }
+            }
+            topInp.checked = bool;
+        }
+    }
+</script>
+</body>
+</html>

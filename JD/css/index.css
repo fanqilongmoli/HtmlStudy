@@ -1,0 +1,254 @@
+@charset "UTF-8";
+/*sub-banner*/
+.sub-banner{
+
+}
+.sub-banner a{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 644px;
+    background: url("../image/banner.jpg") no-repeat top center;
+}
+/*sub-banner*/
+/*main 部分开始*/
+.main{
+    position: relative;
+}
+.main-slider {
+    float: left;
+    width: 730px;
+    height: 454px;
+    margin: 12px 0 0 220px;
+    position: relative;
+}
+
+.main-slider ul {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    margin-left: -66px;
+}
+
+.main-slider li {
+    float: left;
+    width: 18px;
+    height: 18px;
+    background: #3e3e3e;
+    color: #fff;
+    text-align: center;
+    line-height: 18px;
+    border-radius: 50%;
+    margin: 0 2px;
+    cursor: pointer;
+}
+
+.main-slider .current {
+    background: #b61b1f;
+}
+
+.arrow a {
+    width: 28px;
+    height: 62px;
+    background: rgba(0, 0, 0, 0.3);
+    /*opacity: 0.3;*/
+    text-align: center;
+    line-height: 62px;
+    color: white;
+    font-size: 22px;
+    font-family: "SimSun", "宋体";
+    position: absolute;
+    margin-top: -31px;
+    top: 50%;
+    /*border-radius: 3px;*/
+}
+
+.arrow a:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.arrow-left {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.arrow-right {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.main-news {
+    float: right;
+}
+
+.main-news-top {
+    height: 372px;
+    width: 248px;
+    margin-top: 12px;
+    border: 1px solid #E4E4E4;
+    overflow: hidden;
+}
+
+.main-news-top-faster {
+    height: 163px;
+    border-bottom: 1px dashed #E4E4E4;
+}
+
+.main-news-top-faster-title {
+    height: 32px;
+    line-height: 32px;
+    border-bottom: 1px dotted #E8e8e7;
+    padding: 0 15px;
+}
+
+.main-news-top-faster-title h3 {
+    float: left;
+    font-family: "Microsoft YaHei";
+    font-size: 16px;
+}
+
+.main-news-top-faster-title a {
+    float: right;
+    font-family: "consolas";
+}
+
+.main-news-top-faster-content {
+    padding: 5px 0 0 15px;
+}
+
+.main-news-top-faster-content li {
+    line-height: 24px;
+}
+
+.main-news-top-faster-content span {
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+.main-news-top-money ul {
+    width: 255px;
+
+}
+
+.main-news-top-money li {
+    float: left;
+    width: 62px;
+    height: 70px;
+    border: 1px solid #E8e8e7;
+    margin-left: -1px;
+    margin-top: -1px;
+    border-top: 0;
+}
+
+.main-news-top-money a {
+    display: inline-block;
+    width: 62px;
+    height: 70px;
+    text-align: center;
+    line-height: 30px;
+    padding-top: 40px;
+    position: relative;
+}
+
+.main-news-top-money i {
+    position: absolute;
+    top: 13px;
+    left: 18px;
+    width: 25px;
+    height: 25px;
+    background: url("../image/icon_lifeserv.png") -25px 0 no-repeat;
+}
+
+.main-news-top-money .main-news-top-money-icon1 {
+
+}
+
+.main-news-top-money .main-news-top-money-icon2 {
+    background-position: -25px -25px;
+}
+
+.main-news-top-money .main-news-top-money-icon3 {
+    background-position: -25px -50px;
+}
+
+.main-news-top-money .main-news-top-money-icon4 {
+    background-position: -25px -75px;
+}
+
+.main-news-top-money .main-news-top-money-icon5 {
+    background-position: -25px -100px;
+}
+
+.main-news-top-money .main-news-top-money-icon6 {
+    background-position: -25px -125px;
+}
+
+.main-news-top-money .main-news-top-money-icon7 {
+    background-position: -25px -150px;
+}
+
+.main-news-top-money .main-news-top-money-icon8 {
+    background-position: -25px -175px;
+}
+
+.main-news-top-money .main-news-top-money-icon9 {
+    background-position: -25px -200px;
+}
+
+.main-news-top-money .main-news-top-money-icon10 {
+    background-position: -25px -225px;
+}
+
+.main-news-top-money .main-news-top-money-icon11 {
+    background-position: -25px -250px;
+}
+
+.main-news-top-money .main-news-top-money-icon12 {
+    background-position: -25px -275px;
+}
+
+.show {
+    background: url("../image/new.jpg") no-repeat right top;
+}
+
+.show-end {
+    background: url("../image/new.jpg") no-repeat 43px 0;
+}
+
+/*main 部分结束*/
+
+/*today 部分开始*/
+.today {
+    position: relative;
+    padding: 10px 0 20px;
+}
+
+.today-left {
+    float: left;
+}
+
+.today-left a {
+    display: block;
+    width: 210px;
+    height: 151px;
+    background: gray;
+}
+
+.today-right {
+    position: relative;
+    overflow: hidden;
+    width: 1000px;
+    float: right;
+}
+
+.today-right ul {
+    width: 450%;
+
+}
+
+.today-right li {
+    float: left;
+    margin-right: 1px;
+}
+
+/*today 部分结束*/
