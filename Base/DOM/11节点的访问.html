@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>节点的访问</title>
+    <style type="text/css">
+        li {
+            width: 100px;
+            height: 100px;
+            background: pink;
+            margin: 5px;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li class="box1"></li>
+    <li class="box2"></li>
+    <li id="box3"></li>
+    <li class="box4"></li>
+    <li class="box5"></li>
+</ul>
+
+<script>
+    //====parentNode 父盒子
+    var box3 = document.getElementById("box3");
+    box3.parentNode.style.background = '#49A9FF';
+
+    //====兄弟节点（前一个和后一个 previousSibling 和 nextSibling）
+    //previousElementSibling 和 nextElementSibling IE678 不支持（不能获取文本节点）
+    //box3.previousElementSibling.style.background = 'blue';
+    //box3.nextElementSibling.style.background = 'red';
+    //IE678 支持这个
+    //box3.previousSibling.style.background = 'blue';
+    //box3.nextSibling.style.background = 'red';
+
+    //兼容性写法
+    var pre = box3.previousElementSibling || box3.previousSibling;
+    var next = box3.nextElementSibling || box3.nextSibling;
+    pre.style.background = 'blue';
+    next.style.background = 'red';
+
+    //====单个子元素  (firstChild,lastChild)
+
+    //box3.parentNode.firstElementChild.style.background = 'yellow';
+    //box3.parentNode.lastElementChild.style.background = 'green';
+    // IE678 支持
+    //box3.parentNode.firstChild.style.background = 'yellow';
+    //box3.parentNode.lastChild.style.background = 'green';
+    var first = box3.parentNode.firstElementChild || box3.parentNode.firstChild;
+    var last = box3.parentNode.lastElementChild || box3.parentNode.lastChild;
+    first.style.background = 'yellow';
+    last.style.background = 'green';
+
+    //====获取所有子元素
+    var arr = box3.parentNode.children;
+    for (var i = 0; i < arr.length; i++) {
+        arr[i].style.background = 'black';
+    }
+    console.log(box3.parentNode.childNodes);
+    console.log(box3.parentNode.children);
+
+    var arr2 = box3.parentNode.childNodes;
+    for (var j = 0; j < arr2.length; j++) {
+        // nodeType === 1 为元素节点
+        if (arr2[j].nodeType === 1) {
+            arr2[j].style.background = 'white';
+        }
+    }
+    //    nodeType  ==  1  表示的是元素节点   记住   元素就是标签
+    //    nodeType  ==  2  表示是属性节点   了解
+    //    nodeType  ==  3  是文本节点   了解
+
+    //   节点自己.parentNode.children[index];随意得到兄弟节点
+
+</script>
+</body>
+</html>

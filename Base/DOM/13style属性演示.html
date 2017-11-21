@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>style属性演示</title>
+    <style type="text/css">
+        .box{
+            border: 10px solid #000;
+        }
+    </style>
+</head>
+<body>
+<div class="box" style="width: 100px;height: 100px;background-color: pink"></div>
+</body>
+
+<script>
+    var box = document.getElementsByTagName('div')[0];
+
+    // 样式比较少的时候使用
+    console.log(box.style.backgroundColor);
+    // style 是对象
+    console.log(box.style);
+    console.log(typeof box.style);
+
+    // 值是字符串 没有设置的值时"";
+    console.log('='+box.style.lineHeight);
+    console.log('=='+box.style.border);
+
+    // 命名规则，驼峰命名。和css不一样
+    console.log(box.style.backgroundColor);
+
+    //设置了类样式不能获取。（只和行内是交互，和内嵌外联无关）
+    console.log(typeof box.className);
+
+    // 6.box.style.cssText = “字符串形式的样式”；
+    console.log(box.style.cssText);
+    box.style.cssText = "width: 200px; height: 200px; background-color: red;line-height:200px;text-align:center;"
+</script>
+</html>

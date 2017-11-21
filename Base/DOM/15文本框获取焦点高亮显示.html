@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文本框获取焦点高亮显示</title>
+    <style type="text/css">
+        input{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<input type="text">
+<input type="text">
+<input type="text">
+<input type="text">
+<input type="text">
+<button>设置</button>
+</body>
+
+<script>
+    var inpArr = document.getElementsByTagName('input');
+    var button = inpArr[inpArr.length-1].nextElementSibling || inpArr[inpArr.length].nextSibling;
+    button.onclick = function () {
+        for(var i=0;i<inpArr.length;i++){
+            inpArr[i].onfocus = function () {
+                this.style.border = "2px solid red";
+                this.style.backgroundColor = "#ccc";
+            };
+            //绑定onblur事件，取消样式
+            inpArr[i].onblur = function () {
+                this.style.border = "";
+                this.style.backgroundColor = "";
+            }
+        }
+    }
+
+</script>
+</html>
