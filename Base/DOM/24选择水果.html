@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择水果</title>
+    <style type="text/css">
+        select {
+            width: 180px;
+            height: 240px;
+            font-size: 16px;
+            background-color: #7dff51;
+        }
+    </style>
+</head>
+<body>
+<select name="" size="10" id="sel1" multiple>
+    <option value="0">香蕉</option>
+    <option value="1">苹果</option>
+    <option value="2">鸭梨</option>
+    <option value="3">葡萄</option>
+</select>
+<button>>>></button>
+<button><<<</button>
+<button>></button>
+<button><</button>
+<select name="" size="10" id="sel2" multiple>
+
+</select>
+</body>
+
+<script>
+    //需求：点击>>>左边的所有选项全部进入右边，
+    //点击<<<右边的所有选项全部进入左边。
+    //思路：获取所有的子元素，然后直接添加到另一侧。
+
+    //获取相关元素
+    var sel1 = document.getElementById("sel1");
+    var sel2 = document.getElementById("sel2");
+    var btnArr = document.getElementsByTagName("button");
+    btnArr[0].onclick = function () {
+        //获取左侧的select标签的所有子元素
+        var arr = sel1.children;
+        //遍历添加到右侧(随着左侧标签内元素的减少，数组的长度也会减少，那么)
+        for (var i = arr.length - 1; i >= 0; i--) {
+            //push()是操作数组的。要往一个标签中添加元素，要用appendChild();
+            //而往另外一个标签中添加元素原来的数组长度容易变化，为了防止跳出循环，我们使用反向遍历数组
+            arr[arr.length - 1 - i].selected = false;
+            sel2.appendChild(arr[arr.length - 1 - i]);
+        }
+    };
+
+    btnArr[1].onclick = function () {
+        //获取左侧的select标签的所有子元素
+        var arr = sel2.children;
+        //遍历添加到右侧(随着左侧标签内元素的减少，数组的长度也会减少，那么)
+        for (var i = arr.length - 1; i >= 0; i--) {
+            //push()是操作数组的。要往一个标签中添加元素，要用appendChild();
+            //而往另外一个标签中添加元素原来的数组长度容易变化，为了防止跳出循环，我们使用反向遍历数组
+            arr[arr.length - 1 - i].selected = false;
+            sel1.appendChild(arr[arr.length - 1 - i]);
+        }
+    };
+
+    btnArr[2].onclick = function () {
+        fn2(sel1, sel2);
+    };
+    btnArr[3].onclick = function () {
+        fn2(sel2, sel1);
+    };
+
+    function fn2(ele1, ele2) {
+        var arr = ele1.children;
+        for (var i = arr.length - 1; i >= 0; i--) {
+            if (arr[i].selected === true) {
+                arr[i].selected = false;
+                ele2.appendChild(arr[i]);
+            }
+        }
+        //获取sel2中的子元素变成真数组，然后排序
+        var aaa = Array.from(ele2.children).sort(function (a,b) {
+            return a.value-b.value;
+        });
+        //删除素有子元素
+        for(var i=0;i<sel2.children.length;i++){
+            ele2.removeChild(ele2.children[i]);
+        }
+        //把排好序的数组添加到sel2中
+        for(var i=0;i<aaa.length;i++){
+            ele2.appendChild(aaa[i]);
+        }
+    }
+
+
+</script>
+</html>
