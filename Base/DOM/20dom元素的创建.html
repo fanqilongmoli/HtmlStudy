@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dom元素的创建</title>
+</head>
+<body>
+<button>创建</button>
+<ul>
+    aaaa
+</ul>
+<script>
+    //第一种创建方式 document.write
+    document.write('<li>document.write()创建</li>');
+
+    var btn = document.getElementsByTagName('button')[0];
+    var ul = document.getElementsByTagName('ul')[0];
+    //    btn.onclick = function () {
+    //        document.write('<li>document.write()创建2</li>');
+    //    };
+
+    //第二种创建方式 直接利用元素innerHTML方法
+    ul.innerHTML += '<li id="li1">innerHTML创建2</li>';
+
+    //第三种创建方式 利用dom的api创建元素
+    var newLi = document.createElement('li');
+    console.log(newLi);
+    // 在父元素的最后面添加元素
+    ul.appendChild(newLi);
+    //指定位置添加
+    var li1 = document.getElementById('li1');
+    ul.insertBefore(newLi, li1);
+</script>
+</body>
+</html>
