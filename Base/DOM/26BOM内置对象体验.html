@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOM内置对象体验</title>
+</head>
+<body>
+<a href="javascript:void(0);">点击我创建一个新的页面</a>
+<a href="JavaScript:void (0);">点击我可以关闭本页面</a>
+<div>点击我跳转到百度</div>
+
+<script>
+    var a1 = document.getElementsByTagName('a')[0];
+    var a2 = document.getElementsByTagName('a')[1];
+    a1.onclick = function () {
+        window.open('http://www.jd.com', '_blank');
+    };
+
+    a2.onclick = function () {
+        window.close();
+    };
+
+    //window.location 对象
+    // - location相当于浏览器地址
+    // - 可以将url解析成独立的片段
+    // location 对象的属性
+    // -href
+    // -hash 返回url中#后面包含的内容，包含#
+    // host 主机名包括端口号
+    // hostname 主机名字
+    // pathname url中的路径部分
+    // protocol 协议一般是http，https
+    // search 查询字符串
+
+    var div = document.getElementsByTagName('div')[0];
+    div.onclick = function () {
+        window.location = 'http://www.baidu.com';
+    }
+
+    //    window.navigator
+    //    window.navigator.platform   //浏览器支持的系统 win/mac/linux
+    //    window.navigator.userAgent  //系统浏览器
+
+    // window history 对象
+    //    后退
+    //    history.back();
+    //    history.go(-1) 0是刷新
+
+    //    前进
+    //    history.forward();
+    //    history.go(1) 0是刷新
+</script>
+</body>
+</html>
