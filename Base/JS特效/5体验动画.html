@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<button>动画</button>
+<div class="box" style="left: 0px"></div>
+</body>
+
+<script>
+    var btn = document.getElementsByTagName("button")[0];
+    var div = document.getElementsByTagName("div")[0];
+
+    //    btn.onclick = function () {
+    //        div.style.left = '500px';
+    //    }
+    btn.onclick = function () {
+        setInterval(function () {
+            console.log(parseInt(div.style.left));
+            //动画原理： 盒子未来的位置 = 盒子现在的位置 + 步长；
+            //style.left赋值，用offsetLeft获取值。
+            //style.left获取值不方便，获取行内式，如果没有事“”；容易出现NaN；
+            //offsetLeft获取值特别方便，而且是现成number方便计算。因为他是只读的不能赋值。
+            div.style.left = div.offsetLeft + 10 + "px";
+        }, 30);
+    }
+</script>
+</html>

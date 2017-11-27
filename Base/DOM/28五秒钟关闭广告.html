@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            height: 5000px;
+        }
+
+        img {
+            position: fixed;
+            top: 50%;
+            margin-top: -220px;
+        }
+
+        .img1 {
+
+            left: 10px;
+        }
+
+        .img2 {
+
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+<img class="img1" src="image/1.gif">
+<img class="img2" src="image/2.gif">
+
+
+<script>
+    var img1 = document.getElementsByClassName('img1')[0];
+    var img2 = document.getElementsByClassName('img2')[0];
+
+    setTimeout(function () {
+        img1.style.display = "none";
+        img2.style.display = "none";
+    }, 5000);
+
+</script>
+</body>
+</html>

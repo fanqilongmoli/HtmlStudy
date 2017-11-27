@@ -6,13 +6,47 @@
 </head>
 <body>
 <script>
-    //setInterval()
-    var num = 0;
-    setInterval(function () {
+    //setInterval() 循环定时器 周而复始的执行
+    //setTimeout()  一次性定时器 用完就报废
+
+    //    var num = 0;
+    //    setInterval(function () {
+    //        console.log(num);
+    //        num++;
+    //    }, 1000);
+
+    //setInterval() 循环定时器 周而复始的执行
+    //setTimeout()  一次性定时器 用完就报废
+
+    // 定义方法1 匿名函数
+    //    setInterval(function () {
+    //        console.log(1);
+    //    }, 1000);
+
+    //定义方法2
+    //    setInterval(fn, 1000);
+    //
+    //    function fn() {
+    //        console.log(2);
+    //    }
+
+    //定义方法3
+    //    setInterval("fn2(111)", 1000);
+    //
+    //    function fn2(num) {
+    //        console.log(num);
+    //    }
+
+
+    var num = 1;
+    var timer = setInterval(function () {
         console.log(num);
         num++;
-    }, 1000);
-
+        if (num === 10) {
+            //如何定值定时器
+            clearInterval(timer);
+        }
+    }, 200);
 </script>
 </body>
 </html>

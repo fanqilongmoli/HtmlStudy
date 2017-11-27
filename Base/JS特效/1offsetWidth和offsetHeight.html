@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>offsetWidth和offsetHeight</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            border: solid 10px #000;
+            margin: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="box"></div>
+</body>
+<script>
+    var box = document.getElementsByClassName('box')[0];
+    console.log('offsetWidth:' + box.offsetWidth);
+    console.log('offsetHeight:' + box.offsetHeight);
+</script>
+</html>
