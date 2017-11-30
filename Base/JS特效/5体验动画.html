@@ -10,11 +10,27 @@
             background-color: pink;
             position: absolute;
         }
+
+        #tip {
+            width: 300px;
+            height: 100px;
+            background-color: green;
+            border-radius: 0 50px 50px 0;
+        }
+
+        #tip2 {
+            width: 0;
+            height: 0;
+            border-top: 30px solid red;
+            border-left: 30px solid whitesmoke;
+        }
     </style>
 </head>
 <body>
 <button>动画</button>
 <div class="box" style="left: 0px"></div>
+<div id="tip"></div>
+<div id="tip2"></div>
 </body>
 
 <script>

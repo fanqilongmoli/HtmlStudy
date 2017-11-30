@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>阻止</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<div class="box"></div>
+<script>
+    var box = document.getElementsByClassName('box')[0];
+
+    box.onmouseover = function (event) {
+        console.log("鼠标放到了box上");
+        event = event || window.event;
+
+        if (event && event.stopPropagation) {
+            event.stopPropagation();
+        } else {
+            event.cancelBubble = true;
+        }
+    };
+
+    document.onmouseover = function (event) {
+        console.log(event.bubbles);
+        console.log(event.target);
+    }
+
+
+</script>
+</body>
+</html>

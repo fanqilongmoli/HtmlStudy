@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo css部分</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+        .main {
+            margin: 0 auto;
+            width: 1000px;
+            margin-top: 10px;
+
+        }
+
+        #Q-nav1 {
+            overflow: hidden;
+        }
+
+        .top {
+            width: 1423px;
+            margin: 0 auto;
+        }
+
+        .Q-nav1 {
+            width: 1424px;
+            margin: 0 auto;
+        }
+
+        .fixed {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            margin-left: -712px;
+        }
+    </style>
+</head>
+<body>
+<div class="top" id="top">
+    <img src="images/top.png" alt=""/>
+</div>
+<div class="Q-nav1" id="Q-nav1">
+    <img src="images/nav.png" alt=""/>
+</div>
+<div class="main" id="main">
+    <img src="images/main.png" alt=""/>
+</div>
+<script src="my.js"></script>
+<script>
+    var topDiv = document.getElementById("top");
+    var height = topDiv.offsetHeight;
+    var middle = document.getElementById("Q-nav1");
+    var main = document.getElementById("main");
+    window.onscroll = function () {
+        if (scroll().top > height) {
+            middle.className += " fixed";
+            main.style.paddingTop = middle.offsetHeight + "px";
+        } else {
+            middle.className = " Q-nav1";
+            main.style.paddingTop = 0;
+        }
+    }
+</script>
+</body>
+</html>

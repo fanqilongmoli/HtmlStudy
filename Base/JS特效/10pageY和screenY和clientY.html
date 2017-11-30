@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pageY和screenY和clientY</title>
+    <style type="text/css">
+        body {
+            height: 5000px;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    document.onclick = function (event) {
+        event = event || window.event;
+        console.log('pageY 整体页面的点击位置' + event.pageY);
+        console.log('screenY 相对屏幕的位置' + event.screenY);
+        console.log('clientY 相对于可视界面的位置' + event.clientY);
+    }
+</script>
+</body>
+</html>
